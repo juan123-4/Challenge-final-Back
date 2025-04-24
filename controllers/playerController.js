@@ -106,6 +106,7 @@ async getByTeam(req, res) {
       const heightImg= req.body.heightImg
       const weight= req.body.weight
       const weightImg= req.body.weightImg
+      const descripcion=req.body.descripcion
       
       const updatePlayer = await Player.findByIdAndUpdate(
         id, {
@@ -120,7 +121,8 @@ async getByTeam(req, res) {
             height,
             heightImg,
             weight,
-            weightImg
+            weightImg,
+            descripcion
         }, {new: true}
       )
       res.json(updatePlayer)

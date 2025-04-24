@@ -13,6 +13,7 @@ const PlayerSchema = new mongoose.Schema({
     heightImg: String,
     weight: { type: String, required: true },
     weightImg: String,
+    descripcion: { type: String, required: true },
 }, { timestamps: true });
 
 
