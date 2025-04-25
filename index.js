@@ -17,10 +17,7 @@ const cookieParser = require("cookie-parser");
 const authroutes = require("./routes/authRoutes");
 
 // Habilitar CORS para todas las solicitudes
-app.use(cors({
-    origin: "http://localhost:5173", // el frontend
-    credentials: true // para permitir cookies
-  }));
+app.use(cors({ origin: "*", credentials: true }));
 
 const PORT = process.env.PORT || 3009
 const routes = require('./routes/routes');
